@@ -1,0 +1,13 @@
+<ng-container *ngIf="groups.length; else loading">
+    <div class="add--group-container">
+        <button (click)="handleCreatingNavigate()">Add new group</button>
+    </div>
+
+    <div *ngFor="let group of groups" class="group">
+        <div>{{ group.title }}</div>
+    </div>
+</ng-container>
+
+<ng-template #loading>
+    LOADING...
+</ng-template>
