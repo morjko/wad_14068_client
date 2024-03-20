@@ -20,6 +20,7 @@ export class CreateGroupContainerComponent {
   }
 
 
+  //function for CREATE a new group
   public handleCreateNewGroup() {
     return this.http.post('https://localhost:7019/api/Groups', this.form.value).subscribe(() => {
         this.form.reset()

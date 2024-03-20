@@ -5,6 +5,12 @@
 
     <div *ngFor="let group of groups" class="group">
         <div>{{ group.title }}</div>
+
+        <div class="actions">
+            <button class="edit__btn" (click)="handleEditPageNavigate(group.id)">Edit</button>
+
+            <button class="remove__btn" (click)="handleRemove(group.id)">Delete</button>
+        </div>
     </div>
 </ng-container>
 
